@@ -1,0 +1,28 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "Start database Container",
+        "type": "shell",
+        "command": "docker-compose up -d db",
+        "problemMatcher": [],
+        "detail": "Starts the PostgreSQL container using Docker Compose",
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        }
+      },
+      {
+        "label": "Stop database Container",
+        "type": "shell",
+        "command": "docker-compose down",
+        "problemMatcher": [],
+        "detail": "Stops the database container",
+        "group": {
+          "kind": "build",
+          "isDefault": false
+        }
+      }
+    ]
+  }
+  
