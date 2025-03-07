@@ -4,11 +4,14 @@ services:
     build:
       context: .
       dockerfile: /Dockerfile-app
+    container_name: shelfkeeper-app
+    restart: unless-stopped
     ports:
       - 8000:8000
 
   db:
     image: postgres:17
+    container_name: shelfkeeper-db
     restart: unless-stopped
     volumes:
       - postgres-data:/var/lib/postgresql/data
